@@ -89,6 +89,7 @@ function setColorText(text, color) {
 // Обновление хэша цветов
 function updateColor(colors = []) {
     document.location.hash = colors.map((element)=> {
+        console.log(element.toString());
         return element.toString().replace('#', '');
     }).join('-')
 
@@ -106,5 +107,5 @@ function getColorsFromCash() {
 
 document.addEventListener('DOMContentLoaded', () => {
 
-    setColor(true);
+    setColor();
 })
